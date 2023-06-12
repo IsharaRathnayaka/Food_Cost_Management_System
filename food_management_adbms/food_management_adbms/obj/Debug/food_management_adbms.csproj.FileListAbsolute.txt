@@ -1,0 +1,13 @@
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.AssemblyReference.cache
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.SuggestedBindingRedirects.cache
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\ES_project2.Login.resources
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.Properties.Resources.resources
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.GenerateResource.cache
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.CoreCompileInputs.cache
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\bin\Debug\food_management_adbms.exe.config
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\bin\Debug\food_management_adbms.exe
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\bin\Debug\food_management_adbms.pdb
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.CopyComplete
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.exe
+C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.pdb

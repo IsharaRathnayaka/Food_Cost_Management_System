@@ -11,3 +11,16 @@ C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\bin\Debu
 C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.CopyComplete
 C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.exe
 C:\Users\LUCKY\source\repos\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.pdb
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\bin\Debug\food_management_adbms.exe.config
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\bin\Debug\food_management_adbms.exe
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\bin\Debug\food_management_adbms.pdb
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.AssemblyReference.cache
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.SuggestedBindingRedirects.cache
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\ES_project2.adminDash.resources
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\ES_project2.Login.resources
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.Properties.Resources.resources
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.GenerateResource.cache
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.CoreCompileInputs.cache
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.csproj.CopyComplete
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.exe
+C:\Users\ISHARA RATHNAYAKA\Source\Repos\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Debug\food_management_adbms.pdb

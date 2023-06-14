@@ -355,7 +355,7 @@ namespace ES_project2
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
             this.bunifuImageButton2.InitialImage = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(19, 21);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(12, 11);
             this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(128, 94);
@@ -410,7 +410,7 @@ namespace ES_project2
             this.bunifuCustomLabel35.AutoSize = true;
             this.bunifuCustomLabel35.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel35.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuCustomLabel35.Location = new System.Drawing.Point(53, 164);
+            this.bunifuCustomLabel35.Location = new System.Drawing.Point(13, 160);
             this.bunifuCustomLabel35.Name = "bunifuCustomLabel35";
             this.bunifuCustomLabel35.Size = new System.Drawing.Size(53, 35);
             this.bunifuCustomLabel35.TabIndex = 68;
@@ -421,7 +421,7 @@ namespace ES_project2
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_id.Location = new System.Drawing.Point(112, 164);
+            this.lbl_id.Location = new System.Drawing.Point(72, 160);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(36, 35);
             this.lbl_id.TabIndex = 69;
@@ -448,7 +448,7 @@ namespace ES_project2
             this.panelAddProduct.Controls.Add(this.bunifuCustomLabel14);
             this.panelAddProduct.Controls.Add(this.staffid);
             this.panelAddProduct.Controls.Add(this.bunifuFlatButton11);
-            this.panelAddProduct.Location = new System.Drawing.Point(626, 766);
+            this.panelAddProduct.Location = new System.Drawing.Point(122, 768);
             this.panelAddProduct.Margin = new System.Windows.Forms.Padding(4);
             this.panelAddProduct.Name = "panelAddProduct";
             this.panelAddProduct.Size = new System.Drawing.Size(1187, 508);
@@ -737,7 +737,7 @@ namespace ES_project2
             this.panelAddReceipe.Controls.Add(this.bunifuCustomLabel10);
             this.panelAddReceipe.Controls.Add(this.bunifuMetroTextbox6);
             this.panelAddReceipe.Controls.Add(this.bunifuFlatButton1);
-            this.panelAddReceipe.Location = new System.Drawing.Point(896, 762);
+            this.panelAddReceipe.Location = new System.Drawing.Point(1339, 784);
             this.panelAddReceipe.Margin = new System.Windows.Forms.Padding(4);
             this.panelAddReceipe.Name = "panelAddReceipe";
             this.panelAddReceipe.Size = new System.Drawing.Size(1183, 501);
@@ -1000,7 +1000,7 @@ namespace ES_project2
             this.panelAddSupplier.Controls.Add(this.bunifuCustomLabel29);
             this.panelAddSupplier.Controls.Add(this.bunifuMetroTextbox12);
             this.panelAddSupplier.Controls.Add(this.bunifuFlatButton2);
-            this.panelAddSupplier.Location = new System.Drawing.Point(1380, 186);
+            this.panelAddSupplier.Location = new System.Drawing.Point(1389, 202);
             this.panelAddSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.panelAddSupplier.Name = "panelAddSupplier";
             this.panelAddSupplier.Size = new System.Drawing.Size(1187, 545);
@@ -1296,7 +1296,7 @@ namespace ES_project2
             this.panelAddWasteMangement.Controls.Add(this.bunifuMetroTextbox33);
             this.panelAddWasteMangement.Controls.Add(this.bunifuFlatButton4);
             this.panelAddWasteMangement.Controls.Add(this.bunifuCustomLabel1);
-            this.panelAddWasteMangement.Location = new System.Drawing.Point(984, 787);
+            this.panelAddWasteMangement.Location = new System.Drawing.Point(1375, 755);
             this.panelAddWasteMangement.Margin = new System.Windows.Forms.Padding(4);
             this.panelAddWasteMangement.Name = "panelAddWasteMangement";
             this.panelAddWasteMangement.Size = new System.Drawing.Size(1179, 508);
@@ -1543,7 +1543,7 @@ namespace ES_project2
             this.panelCostCalculate.Controls.Add(this.bunifuMetroTextbox18);
             this.panelCostCalculate.Controls.Add(this.bunifuFlatButton3);
             this.panelCostCalculate.Controls.Add(this.bunifuCustomLabel13);
-            this.panelCostCalculate.Location = new System.Drawing.Point(185, 216);
+            this.panelCostCalculate.Location = new System.Drawing.Point(185, 214);
             this.panelCostCalculate.Margin = new System.Windows.Forms.Padding(4);
             this.panelCostCalculate.Name = "panelCostCalculate";
             this.panelCostCalculate.Size = new System.Drawing.Size(1187, 505);
@@ -1560,7 +1560,7 @@ namespace ES_project2
             this.bunifuMetroTextbox22.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox22.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox22.isPassword = false;
-            this.bunifuMetroTextbox22.Location = new System.Drawing.Point(879, 412);
+            this.bunifuMetroTextbox22.Location = new System.Drawing.Point(891, 404);
             this.bunifuMetroTextbox22.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox22.Name = "bunifuMetroTextbox22";
             this.bunifuMetroTextbox22.Size = new System.Drawing.Size(172, 34);
@@ -1577,7 +1577,7 @@ namespace ES_project2
             this.bunifuMetroTextbox17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox17.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox17.isPassword = false;
-            this.bunifuMetroTextbox17.Location = new System.Drawing.Point(879, 443);
+            this.bunifuMetroTextbox17.Location = new System.Drawing.Point(891, 442);
             this.bunifuMetroTextbox17.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox17.Name = "bunifuMetroTextbox17";
             this.bunifuMetroTextbox17.Size = new System.Drawing.Size(172, 34);
@@ -1589,7 +1589,7 @@ namespace ES_project2
             this.bunifuCustomLabel39.AutoSize = true;
             this.bunifuCustomLabel39.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel39.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel39.Location = new System.Drawing.Point(623, 444);
+            this.bunifuCustomLabel39.Location = new System.Drawing.Point(660, 452);
             this.bunifuCustomLabel39.Name = "bunifuCustomLabel39";
             this.bunifuCustomLabel39.Size = new System.Drawing.Size(152, 24);
             this.bunifuCustomLabel39.TabIndex = 78;
@@ -1600,7 +1600,7 @@ namespace ES_project2
             this.bunifuCustomLabel40.AutoSize = true;
             this.bunifuCustomLabel40.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel40.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel40.Location = new System.Drawing.Point(623, 414);
+            this.bunifuCustomLabel40.Location = new System.Drawing.Point(658, 414);
             this.bunifuCustomLabel40.Name = "bunifuCustomLabel40";
             this.bunifuCustomLabel40.Size = new System.Drawing.Size(196, 24);
             this.bunifuCustomLabel40.TabIndex = 77;
@@ -1616,7 +1616,7 @@ namespace ES_project2
             this.bunifuMetroTextbox23.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox23.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox23.isPassword = false;
-            this.bunifuMetroTextbox23.Location = new System.Drawing.Point(381, 448);
+            this.bunifuMetroTextbox23.Location = new System.Drawing.Point(356, 444);
             this.bunifuMetroTextbox23.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox23.Name = "bunifuMetroTextbox23";
             this.bunifuMetroTextbox23.Size = new System.Drawing.Size(172, 34);
@@ -1633,7 +1633,7 @@ namespace ES_project2
             this.bunifuMetroTextbox16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox16.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox16.isPassword = false;
-            this.bunifuMetroTextbox16.Location = new System.Drawing.Point(381, 409);
+            this.bunifuMetroTextbox16.Location = new System.Drawing.Point(356, 405);
             this.bunifuMetroTextbox16.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox16.Name = "bunifuMetroTextbox16";
             this.bunifuMetroTextbox16.Size = new System.Drawing.Size(172, 34);
@@ -1661,7 +1661,7 @@ namespace ES_project2
             this.bunifuMetroTextbox13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox13.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox13.isPassword = false;
-            this.bunifuMetroTextbox13.Location = new System.Drawing.Point(657, 257);
+            this.bunifuMetroTextbox13.Location = new System.Drawing.Point(658, 261);
             this.bunifuMetroTextbox13.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox13.Name = "bunifuMetroTextbox13";
             this.bunifuMetroTextbox13.Size = new System.Drawing.Size(405, 46);
@@ -1678,7 +1678,7 @@ namespace ES_project2
             this.bunifuMetroTextbox14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox14.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox14.isPassword = false;
-            this.bunifuMetroTextbox14.Location = new System.Drawing.Point(661, 176);
+            this.bunifuMetroTextbox14.Location = new System.Drawing.Point(662, 180);
             this.bunifuMetroTextbox14.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox14.Name = "bunifuMetroTextbox14";
             this.bunifuMetroTextbox14.Size = new System.Drawing.Size(405, 46);
@@ -1690,7 +1690,7 @@ namespace ES_project2
             this.bunifuCustomLabel24.AutoSize = true;
             this.bunifuCustomLabel24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel24.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel24.Location = new System.Drawing.Point(663, 230);
+            this.bunifuCustomLabel24.Location = new System.Drawing.Point(664, 234);
             this.bunifuCustomLabel24.Name = "bunifuCustomLabel24";
             this.bunifuCustomLabel24.Size = new System.Drawing.Size(166, 24);
             this.bunifuCustomLabel24.TabIndex = 70;
@@ -1701,7 +1701,7 @@ namespace ES_project2
             this.bunifuCustomLabel30.AutoSize = true;
             this.bunifuCustomLabel30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel30.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel30.Location = new System.Drawing.Point(659, 148);
+            this.bunifuCustomLabel30.Location = new System.Drawing.Point(660, 152);
             this.bunifuCustomLabel30.Name = "bunifuCustomLabel30";
             this.bunifuCustomLabel30.Size = new System.Drawing.Size(114, 24);
             this.bunifuCustomLabel30.TabIndex = 69;
@@ -1717,7 +1717,7 @@ namespace ES_project2
             this.bunifuMetroTextbox15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox15.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox15.isPassword = false;
-            this.bunifuMetroTextbox15.Location = new System.Drawing.Point(661, 101);
+            this.bunifuMetroTextbox15.Location = new System.Drawing.Point(662, 105);
             this.bunifuMetroTextbox15.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox15.Name = "bunifuMetroTextbox15";
             this.bunifuMetroTextbox15.Size = new System.Drawing.Size(405, 46);
@@ -1729,7 +1729,7 @@ namespace ES_project2
             this.bunifuCustomLabel31.AutoSize = true;
             this.bunifuCustomLabel31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel31.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel31.Location = new System.Drawing.Point(657, 74);
+            this.bunifuCustomLabel31.Location = new System.Drawing.Point(658, 78);
             this.bunifuCustomLabel31.Name = "bunifuCustomLabel31";
             this.bunifuCustomLabel31.Size = new System.Drawing.Size(110, 24);
             this.bunifuCustomLabel31.TabIndex = 67;
@@ -1818,7 +1818,7 @@ namespace ES_project2
             this.bunifuCustomLabel34.AutoSize = true;
             this.bunifuCustomLabel34.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel34.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel34.Location = new System.Drawing.Point(124, 74);
+            this.bunifuCustomLabel34.Location = new System.Drawing.Point(123, 80);
             this.bunifuCustomLabel34.Name = "bunifuCustomLabel34";
             this.bunifuCustomLabel34.Size = new System.Drawing.Size(156, 24);
             this.bunifuCustomLabel34.TabIndex = 60;
@@ -1834,7 +1834,7 @@ namespace ES_project2
             this.bunifuMetroTextbox19.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox19.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox19.isPassword = false;
-            this.bunifuMetroTextbox19.Location = new System.Drawing.Point(124, 107);
+            this.bunifuMetroTextbox19.Location = new System.Drawing.Point(123, 105);
             this.bunifuMetroTextbox19.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox19.Name = "bunifuMetroTextbox19";
             this.bunifuMetroTextbox19.Size = new System.Drawing.Size(405, 46);
@@ -1879,14 +1879,14 @@ namespace ES_project2
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(773, 337);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(664, 337);
             this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(269, 46);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(399, 46);
             this.bunifuFlatButton3.TabIndex = 57;
             this.bunifuFlatButton3.Text = "Calculate Cost";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

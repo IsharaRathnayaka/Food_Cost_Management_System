@@ -23,7 +23,7 @@ namespace ES_project2
         public Login()
         {
             InitializeComponent();
-            box_log_pass.isPassword = true;         
+            box_log_pass.isPassword = true;          
         }
 
         public static string main_id = "";
@@ -65,7 +65,7 @@ namespace ES_project2
                 }
                 catch (OracleException ex)
                 {
-                   
+                    MessageBox.Show("error");
                 }
             }
 

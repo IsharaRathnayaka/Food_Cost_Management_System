@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Oracle.ManagedDataAccess.Client;
-using System;
-using System.Data;
+//using System;
+//using System.Data;
 
 
 

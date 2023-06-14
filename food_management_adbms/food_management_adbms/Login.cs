@@ -28,8 +28,7 @@ namespace ES_project2
 
         public static string main_id = "";
 
-        //string connectionString = "DATA SOURCE=localhost:1521/xe;DBA PRIVILEGE=SYSDBA;TNS_ADMIN=C:\\Users\\LUCKY\\Oracle\\network\\admin;PERSIST SECURITY INFO=True;USER ID=SYS";
-
+       
         string connectionString = "DATA SOURCE=localhost:1521/xe;User ID=system;Password=1111";
 
         
@@ -65,7 +64,7 @@ namespace ES_project2
                 }
                 catch (OracleException ex)
                 {
-                    MessageBox.Show("error");
+                    MessageBox.Show(ex.Message);
                 }
             }
 
@@ -87,6 +86,11 @@ namespace ES_project2
             {
                 
                 MessageBox.Show("Login successful!");
+
+                Dashboard dash = new Dashboard();
+                dash.Show();
+                this.Hide();
+
                 
             }
             else

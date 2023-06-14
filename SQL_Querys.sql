@@ -23,6 +23,7 @@ CREATE TABLE food_inventory (
 );
 
 
+
 CREATE OR REPLACE PROCEDURE add_food_item(
   p_item_id     NUMBER,
   p_item_name   VARCHAR2,
@@ -39,3 +40,53 @@ EXCEPTION
   WHEN OTHERS THEN
     DBMS_OUTPUT.PUT_LINE('Error: Unable to add food item.');
 END;
+
+----------------------------------------------------------------- update
+
+CREATE OR REPLACE PROCEDURE update_inventory(
+  p_item_id   NUMBER,
+  p_quantity  NUMBER
+) AS
+BEGIN
+  UPDATE food_inventory
+  SET quantity = quantity - p_quantity
+  WHERE item_id = p_item_id;
+  COMMIT;
+  DBMS_OUTPUT.PUT_LINE('Inventory updated successfully.');
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    DBMS_OUTPUT.PUT_LINE('Error: Food item not found.');
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error: Unable to update inventory.');
+END;
+/
+
+------------------------------------------------------------------display
+
+CREATE OR REPLACE PROCEDURE display_inventory AS
+BEGIN
+  FOR item IN (SELECT item_id, item_name, quantity, price, expiration_date FROM food_inventory) LOOP
+    DBMS_OUTPUT.PUT_LINE('Item ID: ' || item.item_id);
+    DBMS_OUTPUT.PUT_LINE('Item Name: ' || item.item_name);
+    DBMS_OUTPUT.PUT_LINE('Quantity: ' || item.quantity);
+    DBMS_OUTPUT.PUT_LINE('Price: ' || item.price);
+    DBMS_OUTPUT.PUT_LINE('Expiration Date: ' || TO_CHAR(item.expiration_date, 'DD-MON-YYYY'));
+    DBMS_OUTPUT.PUT_LINE('------------------------');
+  END LOOP;
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error: Unable to display inventory.');
+END;
+/
+
+
+--//////////////////////////////////////////////////////////////////////////////// testing 
+
+BEGIN
+
+Add_food_item (1,'apple',10,100,TO_DATE('2023-06-30','YYYY-MM-DD'));
+
+END;
+
+
+

@@ -25,7 +25,7 @@ namespace ES_project2
             pUser.Visible = false;
             PanAdmin.Visible = true;    
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LUCKY\source\repos\KavinduLakmal2000\Project_Insurance_C-\Car_Insurance_DB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"DATA SOURCE=localhost:1521/xe;DBA PRIVILEGE=SYSDBA;TNS_ADMIN=C:\Users\LUCKY\Oracle\network\admin;USER ID=SYS");
 
         //.//////////////////////////////////////////////////////////////// top button set /////////////////////////////////////////////////
         private void regi_tab_Click(object sender, EventArgs e)

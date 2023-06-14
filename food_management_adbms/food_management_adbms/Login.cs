@@ -10,6 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Oracle.ManagedDataAccess.Client;
+using System;
+using System.Data;
 
 
 
@@ -22,77 +25,81 @@ namespace ES_project2
             InitializeComponent();
             box_log_pass.isPassword = true;         
         }
-        public static string main_id = ""; // use this id in everywhere
+
+        public static string main_id = "";
+
+        //string connectionString = "DATA SOURCE=localhost:1521/xe;DBA PRIVILEGE=SYSDBA;TNS_ADMIN=C:\\Users\\LUCKY\\Oracle\\network\\admin;PERSIST SECURITY INFO=True;USER ID=SYS";
+
+        string connectionString = "DATA SOURCE=localhost:1521/xe;User ID=system;Password=1111";
+
+        
+
+        private bool AuthenticateUser(string username, string password)
+        {
+            bool isAuthenticated = false;
+
+
+
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (OracleCommand command = new OracleCommand("SELECT COUNT(*) FROM sys.user_login WHERE username = :username AND password = :password", connection))
+                    {
+                        
+                        command.Parameters.Add("username", OracleDbType.Varchar2).Value = username; 
+                        command.Parameters.Add("password", OracleDbType.Varchar2).Value = password;
+                     
+
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+
+                       
+
+                        if (count > 0)
+                        {
+                            isAuthenticated = true;
+                        }
+                    }
+                }
+                catch (OracleException ex)
+                {
+                   
+                }
+            }
+
+            return isAuthenticated;
+        }
+
 
         private void bt_login_Click(object sender, EventArgs e)
         {
             String userid = box_id.Text;
-            //String userpass = box_log_pass.Text;
-
+            String userpass = box_log_pass.Text;
             main_id = userid;
 
 
 
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LUCKY\source\repos\KavinduLakmal2000\Project_Insurance_C-\Car_Insurance_DB.mdf;Integrated Security=True;Connect Timeout=30");
+            bool isAuthenticated = AuthenticateUser(userid, userpass);
 
-
-            String res = userid.Substring(0, 1);
-  
-            if (res == "1")
+            if (isAuthenticated)
             {
-
-                /////////////////////////////////////////////for admin login ///////////////////////////////////////////
                 
-
-                String chkquery = "select * from admin where id = '" + box_id.Text.Trim() + "' and password = '" + box_log_pass.Text.Trim() + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(chkquery, conn);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows.Count == 1)
-                {
-                   MessageBox.Show("Admin Login successful!");
-                 
-
-                }
-                else
-                {
-                    MessageBox.Show("check your password & ID then try again!");
-                }
-               
+                MessageBox.Show("Login successful!");
+                
             }
-            else if (res == "2")
-            {
-                ///////////////////////////////////////////////for staf login ///////////////////////////////////////////////////
-
-                String chkquery = "select * from staff where id = '" + box_id.Text.Trim() + "' and password = '" + box_log_pass.Text.Trim() + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(chkquery, conn);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows.Count == 1)
-                {
-                    MessageBox.Show("Staff Login successful!");
-               
-
-                }
-                else
-                {
-                    MessageBox.Show("check your password & ID then try again!");
-                }
-
-            }
-
             else
             {
-                MessageBox.Show("Check your ID and try again !");
+               
+                MessageBox.Show("Invalid username or password. Please try again.");
+
             }
 
+       
+            }
 
-            // after enter id and pass then press login
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+            private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

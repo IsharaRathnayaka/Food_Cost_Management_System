@@ -1,0 +1,7 @@
+C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\x64\Debug\food_management_adbms.csproj.AssemblyReference.cache
+C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\x64\Debug\food_management_adbms.csproj.SuggestedBindingRedirects.cache
+C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\x64\Debug\ES_project2.adminDash.resources
+C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\x64\Debug\ES_project2.Login.resources
+C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\x64\Debug\food_management_adbms.Properties.Resources.resources
+C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\x64\Debug\food_management_adbms.csproj.GenerateResource.cache
+C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\x64\Debug\food_management_adbms.csproj.CoreCompileInputs.cache

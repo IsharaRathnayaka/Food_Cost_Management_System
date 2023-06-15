@@ -31,3 +31,4 @@ C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_m
 C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Release\food_management_adbms.exe
 C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Release\food_management_adbms.pdb
 C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Release\ES_project2.Dashboard.resources
+C:\Users\LUCKY\Source\Repos\KavinduLakmal2000\Food_Cost_Management_System\food_management_adbms\food_management_adbms\obj\Release\ES_project2.DevInfo.resources

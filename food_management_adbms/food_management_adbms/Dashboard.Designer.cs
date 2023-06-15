@@ -116,6 +116,7 @@ namespace ES_project2
             this.bunifuCustomLabel27 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.invView = new System.Windows.Forms.DataGridView();
             this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
@@ -128,6 +129,7 @@ namespace ES_project2
             this.panelCostCalculate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_cost
@@ -1721,12 +1723,28 @@ namespace ES_project2
             this.bunifuCustomLabel13.TabIndex = 89;
             this.bunifuCustomLabel13.Text = "Inventory:\r\n";
             // 
+            // bunifuImageButton4
+            // 
+            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
+            this.bunifuImageButton4.ImageActive = null;
+            this.bunifuImageButton4.InitialImage = null;
+            this.bunifuImageButton4.Location = new System.Drawing.Point(31, 503);
+            this.bunifuImageButton4.Name = "bunifuImageButton4";
+            this.bunifuImageButton4.Size = new System.Drawing.Size(70, 60);
+            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton4.TabIndex = 83;
+            this.bunifuImageButton4.TabStop = false;
+            this.bunifuImageButton4.Zoom = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton4_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1409, 800);
+            this.Controls.Add(this.bunifuImageButton4);
             this.Controls.Add(this.panelCostCalculate);
             this.Controls.Add(this.panelAddWasteMangement);
             this.Controls.Add(this.panelAddSupplier);
@@ -1767,6 +1785,7 @@ namespace ES_project2
             this.panelCostCalculate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1860,5 +1879,6 @@ namespace ES_project2
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel27;
         private System.Windows.Forms.DataGridView invView;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
     }
 }

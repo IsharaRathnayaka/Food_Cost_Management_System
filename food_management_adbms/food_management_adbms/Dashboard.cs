@@ -746,6 +746,12 @@ namespace ES_project2
             GetSupplier();
 
         }
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            DevInfo devInfo = new DevInfo();   
+            devInfo.Show();
+        }
     }
 
 

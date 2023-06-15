@@ -102,12 +102,40 @@ BEGIN
   INSERT INTO recipe ( recipe_id, recipe_name,notes,recipe_cost )
   VALUES (r_id, r_name, r_note, r_cost);
   COMMIT;
-  DBMS_OUTPUT.PUT_LINE('Food item added successfully.');
+  DBMS_OUTPUT.PUT_LINE('recipe item added successfully.');
 EXCEPTION
   WHEN OTHERS THEN
-    DBMS_OUTPUT.PUT_LINE('Error: Unable to add food item.');
+    DBMS_OUTPUT.PUT_LINE('Error: Unable to add recipe item.');
 END;
 
+-- //////////////////////////////////////////////////////////////////////////////// add supplier 
+
+CREATE TABLE supplier (
+  supplier_id     NUMBER,
+  supplier_name   VARCHAR2(100),
+  supplier_mobile	NUMBER,
+  supplier_items    VARCHAR2(200)
+  
+);
+
+
+
+CREATE OR REPLACE PROCEDURE add_supplier(
+  s_id     NUMBER,
+  s_name   VARCHAR2,
+  s_mobile NUMBER, 
+  s_items  VARCHAR2
+
+) AS
+BEGIN
+  INSERT INTO supplier ( supplier_id, supplier_name, supplier_mobile,  supplier_items)
+  VALUES (s_id, s_name, s_mobile, s_items);
+  COMMIT;
+  DBMS_OUTPUT.PUT_LINE('supplier added successfully.');
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error: Unable to add supplier.');
+END;
 
 
 --//////////////////////////////////////////////////////////////////////////////// testing 
@@ -119,6 +147,12 @@ Add_food_item (1,'apple',10,100,TO_DATE('2023-06-30','YYYY-MM-DD'));
 END;
 
 GRANT EXECUTE ON sys.add_food_item TO system;
+
+GRANT EXECUTE ON sys.add_recipe TO system;
+
+GRANT DELETE ON sys.recipe TO system;
+
+GRANT EXECUTE ON sys.add_supplier TO system;
 
 
 

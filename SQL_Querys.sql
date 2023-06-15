@@ -171,12 +171,69 @@ REFERENCES supplier (supplier_id);
 
 COMMIT;
 
+-- /////////////////////////////////////////////////////////////////////////////////// cursor for supplier
+
+DECLARE
+  CURSOR supplier_cursor IS
+    SELECT supplier_id, supplier_name, supplier_mobile, supplier_items
+    FROM supplier;
+    
+  v_supplier_id supplier.supplier_id%TYPE;
+  v_supplier_name supplier.supplier_name%TYPE;
+  v_supplier_mobile supplier.supplier_mobile%TYPE;
+  v_supplier_items supplier.supplier_items%TYPE;
+BEGIN
+  OPEN supplier_cursor;
+  
+  LOOP
+    FETCH supplier_cursor INTO v_supplier_id, v_supplier_name, v_supplier_mobile, v_supplier_items;
+    EXIT WHEN supplier_cursor%NOTFOUND;
+    
+    
+    DBMS_OUTPUT.PUT_LINE('Supplier ID: ' || v_supplier_id);
+    DBMS_OUTPUT.PUT_LINE('Supplier Name: ' || v_supplier_name);
+    DBMS_OUTPUT.PUT_LINE('Supplier Mobile: ' || v_supplier_mobile);
+    DBMS_OUTPUT.PUT_LINE('Supplier Items: ' || v_supplier_items);
+    DBMS_OUTPUT.PUT_LINE('--------------------------');
+  END LOOP;
+  
+  CLOSE supplier_cursor;
+END;
+
+-- //////////////////////////////////////////////////////////////////////////////////// cursor for recipe
+
+DECLARE
+  CURSOR recipe_cursor IS
+    SELECT recipe_id, recipe_name, notes, recipe_cost
+    FROM recipe;
+    
+  v_recipe_id recipe.recipe_id%TYPE;
+  v_recipe_name recipe.recipe_name%TYPE;
+  v_notes recipe.notes%TYPE;
+  v_recipe_cost recipe.recipe_cost%TYPE;
+BEGIN
+  OPEN recipe_cursor;
+  
+  LOOP
+    FETCH recipe_cursor INTO v_recipe_id, v_recipe_name, v_notes, v_recipe_cost;
+    EXIT WHEN recipe_cursor%NOTFOUND;
+    
+    DBMS_OUTPUT.PUT_LINE('Recipe ID: ' || v_recipe_id);
+    DBMS_OUTPUT.PUT_LINE('Recipe Name: ' || v_recipe_name);
+    DBMS_OUTPUT.PUT_LINE('Notes: ' || v_notes);
+    DBMS_OUTPUT.PUT_LINE('Recipe Cost: ' || v_recipe_cost);
+    DBMS_OUTPUT.PUT_LINE('--------------------------');
+  END LOOP;
+  
+  CLOSE recipe_cursor;
+END;
+
 
 --//////////////////////////////////////////////////////////////////////////////// testing 
 
 BEGIN
 
---Add_food_item (1,'apple',10,100,TO_DATE('2023-06-30','YYYY-MM-DD'));
+Add_food_item (1,'apple',10,100,TO_DATE('2023-06-30','YYYY-MM-DD'));
 
 add_supplier(2, 'kumara' , 0715123098 , 'chicken meatballs');
 

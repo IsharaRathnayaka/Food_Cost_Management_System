@@ -40,10 +40,10 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.line1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.SlideA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.SuspendLayout();
             // 
             // SlideA
@@ -139,9 +139,9 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Silver;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(0, 66);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(110, 24);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(140, 30);
             this.bunifuCustomLabel1.TabIndex = 1;
-            this.bunifuCustomLabel1.Text = "ID Number :\r\n";
+            this.bunifuCustomLabel1.Text = "User Name :\r\n";
             // 
             // bt_login
             // 
@@ -182,13 +182,13 @@
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(167, 34);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(105, 93);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(391, 102);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(503, 78);
             this.bunifuCustomLabel3.TabIndex = 5;
-            this.bunifuCustomLabel3.Text = "LOGIN\r\nCAR INSURANCE";
+            this.bunifuCustomLabel3.Text = "FOOD COST MANAGEMENT \r\nLOGIN";
             this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // line1
@@ -218,19 +218,20 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // bunifuImageButton2
+            // bunifuImageButton3
             // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.InitialImage = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(-3, 12);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(124, 99);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 5;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.InitialImage = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(11, 11);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(128, 80);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 60;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
             // 
             // Login
             // 
@@ -238,7 +239,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(720, 770);
-            this.Controls.Add(this.bunifuImageButton2);
+            this.Controls.Add(this.bunifuImageButton3);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.line1);
@@ -250,7 +251,7 @@
             this.SlideA.ResumeLayout(false);
             this.SlideA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,7 +270,7 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuCheckbox chkbox;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
     }
 }
 

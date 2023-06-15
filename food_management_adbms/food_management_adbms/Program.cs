@@ -17,7 +17,7 @@ namespace food_management_adbms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
+            Application.Run(new Login());
         }
     }
 }

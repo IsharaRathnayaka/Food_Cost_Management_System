@@ -388,22 +388,22 @@ namespace ES_project2
             // bunifuCustomLabel35
             // 
             this.bunifuCustomLabel35.AutoSize = true;
-            this.bunifuCustomLabel35.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel35.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel35.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuCustomLabel35.Location = new System.Drawing.Point(13, 160);
+            this.bunifuCustomLabel35.Location = new System.Drawing.Point(-3, 150);
             this.bunifuCustomLabel35.Name = "bunifuCustomLabel35";
-            this.bunifuCustomLabel35.Size = new System.Drawing.Size(53, 35);
+            this.bunifuCustomLabel35.Size = new System.Drawing.Size(126, 28);
             this.bunifuCustomLabel35.TabIndex = 68;
-            this.bunifuCustomLabel35.Text = "ID :\r\n";
+            this.bunifuCustomLabel35.Text = "User Name :\r\n";
             // 
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_id.Location = new System.Drawing.Point(72, 160);
+            this.lbl_id.Location = new System.Drawing.Point(6, 190);
             this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(36, 35);
+            this.lbl_id.Size = new System.Drawing.Size(38, 35);
             this.lbl_id.TabIndex = 69;
             this.lbl_id.Text = "...";
             // 

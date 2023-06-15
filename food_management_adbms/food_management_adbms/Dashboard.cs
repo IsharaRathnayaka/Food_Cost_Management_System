@@ -194,6 +194,47 @@ namespace ES_project2
 
         // -------------------------------------------------------------------------------------------------------------------------------
 
+        public void AddtotCost(int cost, DateTime date)
+        {
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (OracleCommand command = new OracleCommand("sys.add_daily_cost", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.Add("total_cost", OracleDbType.Int32).Value = cost;
+                        command.Parameters.Add("marked_date", OracleDbType.Date).Value = date;
+
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Daily Cost saved successfully! ");
+                            connection.Close();
+                        }
+
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show(ex.Message);
+                        }
+
+
+
+                    }
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+
+        // -------------------------------------------------------------------------------------------------------------------------------
         public void Addsupp(int suppId, string suppName, int suppPhone, string suppitems)
         {
             using (OracleConnection connection = new OracleConnection(connectionString))
@@ -293,7 +334,7 @@ namespace ES_project2
                         {
                             adapter.Fill(inventoryTable);
 
-                            //rece_view.DataSource = inventoryTable;
+                            invView.DataSource = inventoryTable;
 
                             connection.Close();
                         }
@@ -345,6 +386,39 @@ namespace ES_project2
 
         //------------------------------------------------------------------------------------------------------------------------
 
+        public DataTable GetSupplier()
+        {
+            DataTable inventoryTable = new DataTable();
+
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (OracleCommand command = new OracleCommand("SELECT * FROM sys.supplier", connection))
+                    {
+                        using (OracleDataAdapter adapter = new OracleDataAdapter(command))
+                        {
+                            adapter.Fill(inventoryTable);
+
+                            suppView.DataSource = inventoryTable;
+
+                            connection.Close();
+                        }
+                    }
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return inventoryTable;
+        }
+
+        //--------------------------------------------------------------------------------------------------------------------------
+
         public void Deleterecipe(int RId)
         {
             using (OracleConnection connection = new OracleConnection(connectionString))
@@ -367,6 +441,32 @@ namespace ES_project2
                 }
             }
         }
+
+        // ---------------------------------------------------------------------------------------------------------------------------
+
+        public void DeleteSupplier(int SId)
+        {
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (OracleCommand command = new OracleCommand("DELETE FROM sys.supplier WHERE supplier_id = :sId", connection))
+                    {
+                        command.Parameters.Add(":sId", OracleDbType.Int32).Value = SId;
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Supplier Deleted successfully! ");
+                        connection.Close();
+                    }
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
         // ----------------------------------------------------------------------------------------------------
 
         public void updateSupplier(int suppId, string suppItem)
@@ -536,7 +636,6 @@ namespace ES_project2
 
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
-            // GetInventory();
 
             Getrecipe();
            
@@ -600,6 +699,52 @@ namespace ES_project2
             string sItems = supp_items.Text;
 
             updateSupplier(sId, sItems);
+        }
+
+        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        {
+            //delete supp
+            int sId = int.Parse(supp_id.Text);
+            DeleteSupplier(sId);
+
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            int Inv = int.Parse(inv_price.Text);
+            int supp = int.Parse(supp_pay.Text);
+            int cook = int.Parse(cook_pay.Text);
+            int EleBill = int.Parse(ele_bill.Text);
+
+            int total = Inv + supp + cook + EleBill;
+
+            tot.Text = total.ToString();
+
+        }
+
+        private void bunifuFlatButton13_Click(object sender, EventArgs e)
+        {
+            int Inv = int.Parse(inv_price.Text);
+            int supp = int.Parse(supp_pay.Text);
+            int cook = int.Parse(cook_pay.Text);
+            int EleBill = int.Parse(ele_bill.Text);
+
+            int total = Inv + supp + cook + EleBill;
+
+
+            DateTime MDate = datepick_cost.Value;
+
+            AddtotCost(total, MDate);
+
+        }
+
+        private void bunifuFlatButton14_Click(object sender, EventArgs e)
+        {
+            // check all
+
+            GetInventory();
+            GetSupplier();
+
         }
     }
 

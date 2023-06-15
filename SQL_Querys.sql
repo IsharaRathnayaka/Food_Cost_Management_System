@@ -137,14 +137,72 @@ EXCEPTION
     DBMS_OUTPUT.PUT_LINE('Error: Unable to add supplier.');
 END;
 
+-- ////////////////////////////////////////////////////////////////////////////// add total cost 
+
+CREATE TABLE daily_cost (
+  total_cost     NUMBER,
+  marked_date	 DATE 
+);
+
+CREATE OR REPLACE PROCEDURE add_daily_cost(
+  totcost     NUMBER,
+  mdate DATE
+) AS
+BEGIN
+  INSERT INTO daily_cost (total_cost, marked_date)
+  VALUES (totcost, mdate);
+  COMMIT;
+  DBMS_OUTPUT.PUT_LINE('cost added successfully.');
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error: Unable to add this cost.');
+END;
+
+-- ////////////////////////////////////////////////////////////////////////////// carete primary and forging keys
+
+ALTER TABLE supplier
+ADD CONSTRAINT pk_supplier PRIMARY KEY (supplier_id);
+
+
+ALTER TABLE food_inventory
+ADD CONSTRAINT fk_food_supplier
+FOREIGN KEY (item_id)
+REFERENCES supplier (supplier_id);
+
+COMMIT;
+
 
 --//////////////////////////////////////////////////////////////////////////////// testing 
 
 BEGIN
 
-Add_food_item (1,'apple',10,100,TO_DATE('2023-06-30','YYYY-MM-DD'));
+--Add_food_item (1,'apple',10,100,TO_DATE('2023-06-30','YYYY-MM-DD'));
+
+add_supplier(2, 'kumara' , 0715123098 , 'chicken meatballs');
+
+Add_food_item (4,'Mango',20,50,TO_DATE('2023-07-30','YYYY-MM-DD'));
+
+Add_food_item (5,'Pineapple',60,90,TO_DATE('2023-07-20','YYYY-MM-DD'));
+
+Add_food_item (6,'Baking powder',50,100,TO_DATE('2023-12-20','YYYY-MM-DD'));
+
+Add_food_item (7,'Chocolate chips',10,500,TO_DATE('2023-08-20','YYYY-MM-DD'));
+
+Add_food_item (8,'Ketchup',40,200,TO_DATE('2023-09-20','YYYY-MM-DD'));
+
+Add_food_item (9,'Cheese',70,600,TO_DATE('2023-12-20','YYYY-MM-DD'));
+
+Add_food_item (10,'Eggs',100,300,TO_DATE('2023-07-20','YYYY-MM-DD'));
+
+Add_food_item (11,'Cooking oil',200,700,TO_DATE('2023-08-20','YYYY-MM-DD'));
+
+Add_food_item (12,'Rice',300,2500,TO_DATE('2023-09-20','YYYY-MM-DD'));
 
 END;
+
+select * from food_inventory;
+
+GRANT EXECUTE ON sys.add_daily_cost TO system;
 
 GRANT EXECUTE ON sys.add_food_item TO system;
 
@@ -153,6 +211,11 @@ GRANT EXECUTE ON sys.add_recipe TO system;
 GRANT DELETE ON sys.recipe TO system;
 
 GRANT EXECUTE ON sys.add_supplier TO system;
+
+GRANT SELECT, INSERT, UPDATE,DELETE ON supplier TO system;
+
+GRANT SELECT, INSERT, UPDATE,DELETE ON daily_cost TO system;
+
 
 
 

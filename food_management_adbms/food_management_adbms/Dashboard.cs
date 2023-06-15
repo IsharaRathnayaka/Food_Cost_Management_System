@@ -1,4 +1,5 @@
 ﻿using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Types;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -147,6 +148,51 @@ namespace ES_project2
                 }
             }
         }
+        ///------------------------------------------------------------------------------------------------------------------ 
+
+        public void Addrecipe(int reciId, string reciName,string reciNote, decimal reciCost)
+        {
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (OracleCommand command = new OracleCommand("sys.add_recipe", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.Add("recipe_id", OracleDbType.Int32).Value = reciId;
+                        command.Parameters.Add("recipe_name", OracleDbType.Varchar2).Value = reciName;
+                        command.Parameters.Add("notes", OracleDbType.Varchar2).Value = reciNote;
+                        command.Parameters.Add("recipe_cost", OracleDbType.Int32).Value = reciCost;
+
+
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Data insert successfully! ");
+                            connection.Close();
+                        }
+
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show(ex.Message);
+                        }
+
+
+
+                    }
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+
 
         public void UpdateInventory(int itemId, int quantity)
         {
@@ -196,11 +242,15 @@ namespace ES_project2
                 {
                     connection.Open();
 
-                    using (OracleCommand command = new OracleCommand("SELECT * FROM food_inventory", connection))
+                    using (OracleCommand command = new OracleCommand("SELECT * FROM sys.food_inventory", connection))
                     {
                         using (OracleDataAdapter adapter = new OracleDataAdapter(command))
                         {
                             adapter.Fill(inventoryTable);
+
+                            //rece_view.DataSource = inventoryTable;
+
+                            connection.Close();
                         }
                     }
                 }
@@ -212,6 +262,121 @@ namespace ES_project2
 
             return inventoryTable;
         }
+
+        // ---------------------------------------------------------------------------------------------------------------------
+
+
+
+        public DataTable Getrecipe()
+        {
+            DataTable inventoryTable = new DataTable();
+
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (OracleCommand command = new OracleCommand("SELECT * FROM sys.recipe", connection))
+                    {
+                        using (OracleDataAdapter adapter = new OracleDataAdapter(command))
+                        {
+                            adapter.Fill(inventoryTable);
+
+                            rece_view.DataSource = inventoryTable;
+
+                            connection.Close();
+                        }
+                    }
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return inventoryTable;
+        }
+
+        //------------------------------------------------------------------------------------------------------------------------
+
+        public void Deleterecipe(int RId)
+        {
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (OracleCommand command = new OracleCommand("DELETE FROM sys.recipe WHERE recipe_id = :rId", connection))
+                    {
+                        command.Parameters.Add(":rId", OracleDbType.Int32).Value = RId;
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Recepe Deleted successfully! ");
+                        connection.Close();
+                    }
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        // -----------------------------------------------------------------------------------------------------------------------
+
+        public DataTable GetSelectedrecipe(string category)
+        {
+            DataTable recipeTable = new DataTable();
+
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (OracleCommand command = new OracleCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = "BEGIN " +
+                                              "  OPEN :cursor FOR " +
+                                              "  SELECT * FROM sys.recipe WHERE recipe_name = :category; " +
+                                              "END;";
+
+                        OracleParameter cursorParam = new OracleParameter();
+                        cursorParam.ParameterName = ":cursor";
+                        cursorParam.Direction = ParameterDirection.Output;
+                        cursorParam.OracleDbType = OracleDbType.RefCursor;
+
+                        OracleParameter categoryParam = new OracleParameter();
+                        categoryParam.ParameterName = ":category";
+                        categoryParam.OracleDbType = OracleDbType.Varchar2;
+                        categoryParam.Value = category;
+
+                        command.Parameters.Add(cursorParam);
+                        command.Parameters.Add(categoryParam);
+
+                        using (OracleDataReader reader = command.ExecuteReader())
+                        {
+                            recipeTable.Load(reader);
+                            rece_view.DataSource = recipeTable;
+                            reader.Close();
+                        }
+                    }
+
+                    connection.Close();
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return recipeTable;
+        }
+
+
+
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -242,6 +407,44 @@ namespace ES_project2
             int quantity = Convert.ToInt32(update_pqua.Text);
 
             UpdateInventory(itemId, quantity);
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            // GetInventory();
+
+            Getrecipe();
+           
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            int RId = int.Parse(test2.Text);
+            string RName = r_name.Text;
+            string RNote = r_note.Text;
+            int RCost = int.Parse(r_cost.Text);
+
+            Addrecipe(RId, RName, RNote, RCost);
+
+        }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            // remove recipe
+            int RId = int.Parse(test2.Text);
+
+            Deleterecipe(RId);
+
+        }
+
+        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        {
+            // selected recipe 
+
+            string recipeName = r_name.Text;    
+
+            GetSelectedrecipe(recipeName);
+
         }
     }
 

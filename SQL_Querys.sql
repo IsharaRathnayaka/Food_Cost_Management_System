@@ -79,6 +79,36 @@ EXCEPTION
 END;
 /
 
+------------------------------------------------------------------ recipe add
+
+CREATE TABLE recipe (
+  recipe_id     NUMBER,
+  recipe_name   VARCHAR2(100),
+  notes			varchar2(200),
+  recipe_cost   NUMBER
+  
+);
+
+
+
+CREATE OR REPLACE PROCEDURE add_recipe(
+  r_id     NUMBER,
+  r_name   VARCHAR2,
+  r_note   varchar2,
+  r_cost       NUMBER
+
+) AS
+BEGIN
+  INSERT INTO recipe ( recipe_id, recipe_name,notes,recipe_cost )
+  VALUES (r_id, r_name, r_note, r_cost);
+  COMMIT;
+  DBMS_OUTPUT.PUT_LINE('Food item added successfully.');
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error: Unable to add food item.');
+END;
+
+
 
 --//////////////////////////////////////////////////////////////////////////////// testing 
 
@@ -87,6 +117,8 @@ BEGIN
 Add_food_item (1,'apple',10,100,TO_DATE('2023-06-30','YYYY-MM-DD'));
 
 END;
+
+GRANT EXECUTE ON sys.add_food_item TO system;
 
 
 
